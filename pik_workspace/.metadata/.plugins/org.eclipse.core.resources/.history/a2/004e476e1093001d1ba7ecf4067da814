@@ -1,0 +1,9 @@
+package Longvinter;
+
+public class DAO {
+
+	DAO(){
+		
+	}
+	
+}

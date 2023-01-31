@@ -1,0 +1,37 @@
+package 메서드;
+
+public class 기본이론3 {
+
+	public static void main(String[] args) {
+		
+
+			Test03 t = new Test03();
+			t.type2(10, 20);
+			// 묵시적 형변환 : 암묵적으로 자동으로 형변환
+			// int -> double
+
+			t.type2(10, 200); // t.type2(10, 200.0);
+			int x = 10;
+			double y = 20.4;
+
+			// 인자값은 매개변수의 자료형과 갯수와 순서가 일치해야한다!
+
+			t.type2(x, y);
+			// t.type2(10.2,10);
+			// 명시적 형변환 : 사용자가 강제로 형변환
+
+			// double -> int 자동으로 변경되않지 않음
+			// 데이터 손실 위험 0.2
+			t.type2((int) 10.2, 10);
+
+			// 3.유산을 받는 변수
+			int result = t.type3();
+
+			System.out.println("main result = " + result);
+
+		
+		
+
+	}
+
+}

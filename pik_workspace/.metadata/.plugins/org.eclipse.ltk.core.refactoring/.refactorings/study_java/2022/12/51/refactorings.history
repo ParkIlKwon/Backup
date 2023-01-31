@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;기본이론1.java&apos; to &apos;study_java2/src/메서드&apos;&#x0D;&#x0A;- Original project: &apos;study_java&apos;&#x0D;&#x0A;- Destination element: &apos;study_java2/src/메서드&apos;&#x0D;&#x0A;- Original element: &apos;메서드.기본이론1.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=study_java2/src&lt;메서드" element1="/src&lt;메서드{기본이론1.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1671156971549" units="1" version="1.0"/>
+</session>

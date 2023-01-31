@@ -1,0 +1,160 @@
+package 클래스배열;
+
+import java.util.Arrays;
+import java.util.Scanner;
+		
+		public class 클배_장바구니2단계 {
+			public static void main(String[] args) {
+				
+				String[] userIdList = {"aaa" , "bbb" , "ccc"};
+				
+				String[] itemNameList = {"사과" , "칸초" , "귤" , "감"};
+				int [] itemPriceList = {10000, 2000, 6500, 3300};
+				
+				String[] cartUserIdList = {"aaa" , "ccc" , "aaa" , "bbb" , "aaa" ,"ccc"};
+				String[] cartItemNameList = {"칸초" , "귤" , "칸초" , "사과" , "감" ,"사과"};
+				
+				User[] userList = new User[userIdList.length];
+				for(int i =0; i < userList.length; i++) {
+					userList[i] = new User();
+					userList[i].id = userIdList[i];
+				}
+				
+				Item[] itemList = new Item[itemNameList.length];
+				for(int i =0; i < itemList.length; i++) {
+					itemList[i] = new Item();
+					itemList[i].name = itemNameList[i];
+					itemList[i].price = itemPriceList[i];
+				}
+				
+				Cart[] cartList = new Cart[cartUserIdList.length];
+				for(int i =0; i < cartList.length; i++) {
+					cartList[i] = new Cart();
+					cartList[i].userId = cartUserIdList[i];
+					cartList[i].itemName = cartItemNameList[i];
+				}
+				
+				Scanner sc = new Scanner(System.in);
+				int idx = 0;
+				int arr[] = new int [userIdList.length]; arr[0] = 0;
+				for (User user : userList) {
+					for (Cart cart : cartList) {
+						if (user.id.equals(cart.userId)) {
+							arr[idx] ++;
+						}
+					}
+				idx ++;
+				}
+				
+				while(true) {
+					System.out.println("[0] 종료\n"
+							+ "[1] 전체출력\n"
+							+ "[2] 회원 aaa가 주문한 각 아이템이름과 가격들을 출력 \n"
+							+ "[3] 카트내용을 전부출력(회원 별 아이템 전체와 아이템 가격을 출력)\n"
+							+ "[4] 주문한 아이템 갯수가 가장많은 회원출력\n"
+							+ "[5] 주문한 아이템 총액이 가장큰 회원출력");
+					int sel = sc.nextInt();
+					if(sel == 0) {
+						break;
+					} else if(sel == 1) {
+						for(int i =0; i < userList.length; i++) {
+							System.out.print(userList[i].id + "   \n");
+						}
+						System.out.println("=================");
+						for(int i =0; i < itemList.length; i++) {
+							System.out.print( itemList[i].name + "   ");
+							System.out.println(itemList[i].price);
+						}
+						System.out.println("=================");
+						for(int i =0; i < cartList.length; i++) {
+							System.out.print(cartList[i].userId + "   ");
+							System.out.println(cartList[i].itemName);
+					
+						}
+						
+					} else if(sel == 2) {
+						System.out.println("회원 aaa가 주문한 각 아이템이름과 가격들을 출력 ");
+						String inId = "aaa";
+						for (Cart cart : cartList) {
+							if (inId.equals(cart.userId)) {
+								System.out.printf("%-3s",cart.itemName);
+								for (Item item : itemList) {
+									if (item.name.equals(cart.itemName)) {
+										System.out.println(item.price + "원");
+									}
+								}
+							}
+							
+						}
+						
+					} else if(sel == 3) {
+					System.out.println("카트내용을 전부출력(회원 별 아이템 전체와 아이템 가격을 출력)");
+					for (Cart cart : cartList) {
+							System.out.printf("%-4s",cart.userId);
+							System.out.printf("%-4s",cart.itemName);
+							for (Item item : itemList) {
+								if (item.name.equals(cart.itemName)) {
+									System.out.println(item.price + "원");
+								}
+							}
+					}
+						
+					} else if(sel == 4) {
+						
+						int index = 0;
+						
+					for (int i = 0; i < arr.length-1; i++) {
+						if (arr[i] > arr[i+1]) {
+							index = i ;
+						}
+					}	
+					System.out.println("주문한 아이템 갯수가 가장많은 회원은:");
+					System.out.println(userList[index].id + " 입니다.");
+						
+						
+					} else if(sel == 5) {
+					int total []	 = new int [3];
+					int index = 0;
+					for (User user : userList) {
+						for (Cart cart : cartList) {
+						if (user.id.equals(cart.userId)) {
+							for (Item item : itemList) {
+								if (cart.itemName.equals(item.name)) {
+									total[index] += item.price; 
+								}
+							}
+							
+						}
+					}
+						index ++;
+					}	
+					
+					index = 0;
+					
+					
+					
+					
+					for (int i = 0; i < total.length; i++) {
+						
+						if (total[index] < total[i]) {
+							index = i ;
+						}
+					}
+					
+					
+					System.out.println("주문한 아이템 금액이 가장많은 회원은:");
+					System.out.println(userList[index].id + " 입니다.");
+						
+						
+						
+						
+					}else {
+						System.err.println("잘못된 접근 :(");
+					}
+				}
+				
+		
+
+	}
+
+}

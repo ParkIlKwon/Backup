@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class 연습용종합장_보조 {
+
+	public static void main(String[] args) {
+		int[] floors = {1, 2, 5, 4, 2};	
+		int dist = 0;
+        int length = floors.length;
+        for (int i = 0; i < floors.length-1; i++) {
+			int num = Math.abs(floors[i] - floors[i+1]);
+			System.out.println(num);
+
+		}
+		
+	
+	}
+}

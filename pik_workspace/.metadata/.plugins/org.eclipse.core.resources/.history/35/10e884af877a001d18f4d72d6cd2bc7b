@@ -1,0 +1,41 @@
+package 클래스배열;
+
+public class 클배EX {
+
+	public static void main(String[] args) {
+		
+		Student s = new Student();
+		
+		Object str [] = {s.number};
+		
+		str[0] = 3;
+		
+		
+		
+		
+		System.out.println(s.number);
+		
+		int b = 2 ;
+		int obj[] = {b};
+		
+		obj[0] = 34;
+		
+		
+		
+		
+		
+		System.out.println(obj[0]);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class 연습용종합장_보조 {
+
+	public static void main(String[] args) {
+		 int number = 29022531;
+		
+		while (number > 0 ) {
+			number /= 10;
+
+		}
+			
+		
+		
+	
+	}
+}

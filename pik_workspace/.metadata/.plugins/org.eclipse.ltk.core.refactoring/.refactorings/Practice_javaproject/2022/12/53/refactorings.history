@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;클래스배열&apos; to &apos;클래스배열메서드&apos;&#x0D;&#x0A;- Original project: &apos;Practice_javaproject&apos;&#x0D;&#x0A;- Original element: &apos;Practice_javaproject/src/클래스배열&apos;&#x0D;&#x0A;- Renamed element: &apos;Practice_javaproject/src/클래스배열메서드&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;클래스배열&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;클래스배열" name="클래스배열메서드" qualified="false" references="true" stamp="1672368851871" textual="false" version="1.0"/>
+</session>

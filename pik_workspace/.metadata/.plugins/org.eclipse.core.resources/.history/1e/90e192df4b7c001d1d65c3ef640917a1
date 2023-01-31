@@ -1,0 +1,80 @@
+package 클래스배열;
+
+	class User{
+		String id;
+	}
+	
+	class Item{
+		String name;
+		int price;
+	}
+	
+	class Cart{
+		String userId;
+		String itemName;
+	}
+
+public class I2_카트1_문제 {
+	public static void main(String[] args) {
+		
+		String data1 = "qwer/asdf/zxcv"; String tdata1[] = data1.split("/");
+		String data2 = "새우깡,1200/감자깡,3200/고구마깡,2100"; String tdata2[] = data2.split("/");
+		String data3 = "qwer,새우깡/qwer,고구마깡/asdf,감자깡/qwer,새우깡/zxcv,새우깡";
+		User[] userList = new User[tdata1.length];
+		Item[] itemList = new Item[tdata2.length];
+		Cart[] cartList;
+		
+		for (int i = 0; i < tdata2.length; i++) {
+			User u = new User();
+			Item it = new Item();
+			u.id = tdata1[i];
+			String tarr [] = new String [2]; tarr = tdata2[i].split(",");
+			it.name = tarr[0];
+			it.price = Integer.parseInt(tarr[1]);
+			userList[i] = u ;
+			itemList[i] = it;
+		}
+		for (Item item : itemList) {
+			System.out.println(item.name);
+			System.out.println(item.price);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+	
+		// [문제] 문자열을 각각의 클래스배열에 저장하고, 회원별로 구매한 상품 총 금액을 출력하시오.
+		// [정답] qwer(4500), asdf(3200), zxcv(1200)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

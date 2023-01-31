@@ -1,0 +1,57 @@
+package Longvinter;
+
+import java.util.ArrayList;
+
+public class Controller {
+	
+	DAO dao ;
+	Player p ;
+	
+	public Controller() {
+		dao = DAO.dao();
+		dao.init();
+	}
+	
+	
+	public void run() {
+		printmap();
+		mainmenu();
+	}
+	
+	void printmap(){
+		
+		for (int i = 0; i < DAO.map.length; i++) {
+			for (int k = 0; k < DAO.map[i].length; k++) {
+				if (DAO.map[i][k].object == 1) {
+					System.out.printf("%-3s","▦");
+				}else if (DAO.map[i][k].object == dao.home) {
+					System.out.printf("%-3s","λ");
+				}else if (DAO.map[i][k].player == true) {
+					System.out.printf("%-3s","옷");
+				}else if (DAO.map[i][k].enemy == true) {
+					System.out.printf("%-3s","+");
+				}else{
+					System.out.printf("%-3s","□");
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+	void mainmenu(){
+		
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+

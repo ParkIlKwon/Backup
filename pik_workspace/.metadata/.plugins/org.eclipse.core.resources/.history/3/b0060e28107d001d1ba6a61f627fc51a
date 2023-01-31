@@ -1,0 +1,108 @@
+package 클래스배열;
+
+import java.util.Scanner;
+
+public class 클배_장바구니2단계삭제 {
+
+	public static void main(String[] args) {
+		
+		String[] userIdList = {"admin" , "bbb" , "ccc"};
+
+		String[] itemNameList = {"사과" , "칸초" , "귤" , "감"};
+		int [] itemPriceList = {10000, 2000, 6500, 3300};
+
+
+		int max =1000;
+		User[] userList = new User[max];
+		int userSize= 0;
+		for(int i = 0; i < userIdList.length; i++) {
+			userList[i] = new User();
+			userList[i].id = userIdList[i];
+			userSize += 1;
+		}
+
+		Item[] itemList = new Item[max];
+		int itemSize= 0;
+		for(int i = 0; i < itemNameList.length; i++) {
+			itemList[i] = new Item();
+			itemList[i].name = itemNameList[i];
+			itemList[i].price = itemPriceList[i];
+			itemSize += 1;
+		}
+
+		Cart[] cartList = new Cart[max];
+		int cartSize= itemList.length;
+
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.println("[0] 종료 [1] 로그인 [2] 회원가입 ");
+			int sel =sc.nextInt();
+			if(sel == 0) {
+				break;
+			}else if(sel == 1) {
+				System.out.println("[로그인] 아이디 입력 : ");				
+				String id = sc.next();
+
+				boolean idCheck = false;
+				for(int i = 0; i < userSize; i++) {
+					if(id.equals(userList[i].id)) {
+						idCheck = true;
+					}
+				}
+
+				if(idCheck == false) {
+					System.out.println("[로그인실패]");
+					continue;
+				}
+
+				if(id.equals("admin")) {					
+					while(true) {
+						System.out.println("[관리자메뉴]");
+						System.out.println("[0] 로그아웃 [1] 아이템 추가 [2] 아이템 삭제");
+						sel = sc.nextInt();
+						if(sel == 0) {
+							break;
+						}else if (sel == 1) {
+							System.out.println("추가할 아이템 이름을 입력하세요.");
+							String str = sc.next();
+							
+
+
+
+
+
+
+
+						}else if (sel == 2) {
+
+
+
+
+						}else {
+							System.err.println("잘못된 입력. :U");
+						}
+					}
+
+				}else {
+					while(true) {
+						System.out.println("[" + id + " 로그인]");
+						System.out.println("[쇼핑메뉴]");
+
+						System.out.println("[0] 로그아웃 [1] 쇼핑 [2] 주문확인 [3] 탈퇴");
+						sel = sc.nextInt();
+						if(sel == 0) {
+							break;
+						}
+					}
+				}			
+			}
+
+		}
+			
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package Longvinter;
+
+import java.util.ArrayList;
+
+public class DAO {
+
+	DAO(){
+		VO [][] map = new VO[size][size];
+		ArrayList<Integer>indexNumber = new ArrayList<Integer>();
+	}
+	
+}

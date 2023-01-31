@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;todayC.장바구니.java&apos; to &apos;J2_장바구니_문제.java&apos;&#x0D;&#x0A;- Original project: &apos;todayC&apos;&#x0D;&#x0A;- Original element: &apos;todayC.장바구니.java&apos;&#x0D;&#x0A;- Renamed element: &apos;todayC.J2_장바구니_문제.java&apos;" description="Rename compilation unit &apos;장바구니.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;todayC{장바구니.java" name="J2_장바구니_문제.java" references="false" stamp="1672020565795" version="1.0"/>
+</session>

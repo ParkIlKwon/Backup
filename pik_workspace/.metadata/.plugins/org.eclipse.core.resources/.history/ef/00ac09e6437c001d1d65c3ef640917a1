@@ -1,0 +1,10 @@
+package level5;
+
+public class 클래스로바꾸기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

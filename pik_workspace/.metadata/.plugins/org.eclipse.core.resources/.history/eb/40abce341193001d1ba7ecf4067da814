@@ -1,0 +1,33 @@
+package Longvinter;
+
+import java.util.ArrayList;
+
+public class DAO {
+
+	final int size = 10;
+	final int home = 10;
+	static VO [][] map = new VO[size][size];
+	ArrayList<Integer>indexNumber = new ArrayList<Integer>();
+	private static DAO instance = new DAO(); 
+	
+	
+	public static DAO dao(){
+		
+	}
+	
+	void init(){
+		for (int i = 0; i < map.length; i++) {
+			for (int k = 0; k < map[i].length; k++) {
+				map[i][k] = new VO();
+			}
+		}
+		
+		map[0][0].object=home;
+		return instance;
+		
+	}
+	
+	
+	
+	
+}

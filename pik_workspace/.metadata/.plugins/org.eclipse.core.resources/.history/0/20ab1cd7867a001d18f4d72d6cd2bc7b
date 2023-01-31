@@ -1,0 +1,30 @@
+package 클래스배열;
+
+public class 클배_기본이론3 {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Student s = new Student();
+		
+		
+		Object str [] = {s.number};
+		
+		str[0] = 3;
+		s.number = 3;
+		
+		
+		System.out.println(s.number);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

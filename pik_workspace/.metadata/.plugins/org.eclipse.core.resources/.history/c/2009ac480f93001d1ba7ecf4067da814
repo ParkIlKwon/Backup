@@ -1,0 +1,18 @@
+package Longvinter;
+
+public abstract class Unit {
+	
+	int hp ;
+	
+	public Unit(){
+		super();
+	}
+
+	public abstract void skill();
+	
+	static public void attack(Unit u,int damage) {
+		u.hp -= damage;
+	}
+		
+	
+}

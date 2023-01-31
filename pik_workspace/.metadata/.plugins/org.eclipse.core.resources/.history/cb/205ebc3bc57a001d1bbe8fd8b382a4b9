@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class 연습용종합장_보조 {
+
+	public static void main(String[] args) {
+
+		double d = 0.2;
+		System.out.printf("%0.2f",d);
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+}

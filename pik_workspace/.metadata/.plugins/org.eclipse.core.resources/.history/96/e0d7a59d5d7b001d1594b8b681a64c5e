@@ -1,0 +1,79 @@
+package 클래스배열;
+
+//class Student{
+//	String name;
+//	int score;
+//	
+//}
+
+ 
+public class 문자열1 {
+
+	public static void main(String[] args) {
+				
+				String data = ""; 
+				data +="김영희/30\n";
+				data += "이만수/40\n";
+				data += "이철민/60";
+
+				String temp[] =  data.split("\n");
+				Student[] studentList = new Student [temp.length];
+				String stemp[][] = new String[temp.length][];
+				for (int i = 0; i < stemp.length; i++) {
+					stemp[i] = temp[i].split("/");
+				}
+				
+				//문제1)data에 있는 내용을 잘라서  studentList 에 저장후 전체출력 
+				
+				for (int i = 0; i < temp.length; i++) {
+					Student stu = new Student();
+					        stu.name  = stemp[i][0];
+					        stu.score  = Integer.parseInt(stemp[i][1]) ;
+					        studentList[i] = stu;
+				}
+				
+				for (Student student : studentList) {
+					System.out.print(student.name);
+					System.out.println(student.score);
+				}
+			
+				
+				
+				//문제2)꼴등 삭제후 다시 data에 저장	
+				
+				
+				for (int i = 0; i < stemp.length; i++) {
+					int min =  studentList[i].score ;
+					
+
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	
+
+	}
+
+}

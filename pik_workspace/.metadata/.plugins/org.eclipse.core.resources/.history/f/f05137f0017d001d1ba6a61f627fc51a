@@ -1,0 +1,10 @@
+package todayC;
+
+public class 연속빈칸찾기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

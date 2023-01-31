@@ -1,0 +1,150 @@
+package 클래스배열;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class 클배_기본예제2 {
+
+	public static void main(String[] args) {
+
+		   int max = 10;
+			Student[] stList = new Student[max];
+			int cnt =0; // 현재 생성한 학생 숫자 
+			int hak = 1001;
+			String num = "";
+			
+			Scanner sc = new Scanner(System.in);
+			Random rd = new Random();
+			String str = "";
+//			Student ss = new Student();
+//			
+//			ss.name = "aaa";
+//			
+//			stList[0] = ss;
+//			System.out.println(stList[0].name);
+			
+			while(true) {
+				System.out.println("[1]학생추가 [2]학생 삭제 [3]수정 [4]검색 [5] 전체출력 [0]종료");
+				
+				int sel = sc.nextInt();
+				if(sel == 0) {
+					break;
+				}else if(sel == 1) {
+					Student stu = new Student();
+					
+					stu.number = hak ;
+					
+					while (true) {
+					
+						// 최대학번 + 1 로 자동으로 학번값 넣어주기 : 학번은 입력받지 않는다
+						System.out.println("[추가]아이디");
+						int idx = -1;
+						str = sc.next();
+						
+						for (int i = 0; i < cnt ; i++) {
+							if (stList[i].id.equals(str)) {
+								System.out.println("fsajp");
+								idx=i;
+							}
+						}
+						if (idx == -1) {
+							break;
+						}
+						
+						System.err.println("중복된 아이디입니다. :)");
+						System.err.println(stList[idx].id);
+					}
+					
+					stu.id = str;
+					
+					System.out.println("[추가]이름");
+					
+					
+					// 이름 아이디(중복 금지) 비번 점수(30-100 랜덤하게 가져오기 )
+					System.out.println("이름을 입력하여주시오.");
+					str = sc.next();
+					stu.name = str;
+					
+					System.out.println("비번을 입력하여주시오.");
+					num = sc.next();
+					
+					stu.pw = num;
+					
+					System.out.println("점수는 랜덤하게 가져오기.");
+					stu.score = rd.nextInt(71)+30;
+					
+					
+					
+					stList[cnt] = stu;
+					System.out.println("학번 : " + stList[cnt].number);
+					System.out.println("id : " + stList[cnt].id);
+					System.out.println("pw : " + stList[cnt].pw);
+					System.out.println("이름 : " + stList[cnt].name);
+					System.out.println("점수 : " + stList[cnt].score);
+					System.out.println("=================");
+					
+					hak ++;
+					cnt ++;
+					
+					// 추가
+				}else if(sel == 2) {
+					System.out.println("삭제할 아이디를 입력하세요.");
+					str = sc.next();
+					int idx = -1;
+					
+					for (int i = 0; i < cnt; i++) {
+						if (stList[i].name.equals(str)) {
+							idx = i;
+							break;
+						}
+					}
+					if (idx == -1) {
+						System.err.println("그 아이디는 존재하지 않습니다.");
+						continue;
+					}
+					
+					for (int i = idx; i < stList.length-1; i++) {
+						stList[i] = stList[i+1];
+					}
+					
+					
+					
+					
+					
+					
+					
+					// 삭제
+				}else if(sel == 3) {
+					// 수정 학생 이름 => 점수 수정 
+				}else if(sel == 4) {
+					//검색 -> 학번 검색 이름, 점수 출력 
+				}else if(sel == 5) {
+					
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
